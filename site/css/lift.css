@@ -1,0 +1,176 @@
+* {
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 13px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../images/bg.png') repeat scroll 0 0;
+}
+body {
+  text-align: center;
+  color:#766D6A;
+}
+img {
+  border: 0;
+}
+img.developer-mugshot {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #009de9;
+/*  background-color: red;*/
+}
+#wrapper {
+  margin: 0px auto;
+  padding: 0;
+/*  padding-bottom: 17px;*/
+  width: 790px;
+  text-align: center;
+/*  background-color: #fff;*/
+}
+#wrapper ol {
+  padding: 0;
+  margin: 0;
+  width: 95%;
+  margin-left: 18px;
+  height: 30px;
+  list-style: none;
+  text-align: left;
+  background-color: #8eadbe;
+}
+#wrapper ol li {
+  height: 39px;
+  padding: 0 8px 0 8px;
+  width: auto;
+  margin-right: 10px;
+  line-height: 40px;
+/*  background-color: red;*/
+  float: left;
+}
+#wrapper ol li:hover {
+  background-color: #7392a3;
+}
+#wrapper ol li.first {
+  margin-left: 20px;
+}
+#wrapper ol li a, #wrapper ol li a:link {
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  
+  text-decoration: none;
+  color: #fff;
+}
+#wrapper ol li a:hover {
+  text-decoration: underline;
+}
+#top-home {
+/*  background-color: yellow;*/
+  width: 100%;
+  margin-top: 12px;
+  background-image: url('../images/home-top.png');
+  height: 496px;
+}
+#inner {
+/*  float: left;*/
+/*  position: relative;*/
+/*  top: -180px;*/
+  position: absolute;
+  top: 380px;
+  width: 745px;
+  margin-left: 19px;
+  text-align: left;
+/*  height: 130px;*/
+/*  background-color: blue;*/
+}
+#home-quotes {
+  height: 120px;
+}
+#home-quotes blockquote {
+  text-align: right;
+  float: right;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 30px;
+  width: 70%;
+/*  background-color: yellow;*/
+}
+blockquote h5 {
+  font: 15px/12px Georgia, serif;
+  font-style: italic;
+  color: #009de9;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+  line-height: 18px;
+  padding-bottom: 7px;
+}
+blockquote span {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#top-buttons {
+  height: 105px;
+  width: 98%;
+  margin-left: 12px;
+/*  background-color: red;*/
+}
+#top-buttons .button {
+  background-image: url('../images/button-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  float: left;
+  width: 180px;
+  margin-right: 2px;
+  height: 129px;
+}
+#main {
+  min-height: 100px;
+  height: auto;
+/*  background-color: red;*/
+}
+#main .column {
+  float: left;
+/*  background-color: red;*/
+}
+hr {
+  color: #009de9;
+  background: #009de9;
+  border: 0;
+  margin: 0;
+  padding:0;
+  border-bottom: 2px dashed #009de9;
+  border-top:0px;
+  border-left:0px;
+  border-right:0px;
+  line-height:0px;
+  height:1px;
+  display:block;
+}
+.slim-column {
+  width: 190px;
+/*  background-color: white;*/
+}
+.slim-column p {
+  font-size: 11px;
+}
+.wide-column {
+  width: 345px;
+}
+.left-column {
+  padding-right: 10px;
+}
+.right-column {
+  padding-left: 10px;
+}
+h2, h3 {
+  color: #009de9;
+  padding-bottom: 5px;
+}
+h2 {
+  border-bottom: 1px dashed #009de9;
+}

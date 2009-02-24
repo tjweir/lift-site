@@ -1,0 +1,83 @@
+== Current Team 
+
+Al Thompson - joined Oct 2 2008 
+
+David Bernard - joined Nov 27 2007 
+
+* David Pollak - joined Fed 2007 
+David Pollak has been writing commercial software since 1977. He wrote the 
+first real-time spreadsheet and the worlds highest performance spreadsheet 
+engine. Since 1996, David has been using and devising web development tools. As CTO 
+of CMP Media, David oversaw the first large-scale deployment of WebLogic. 
+David was CTO and VPE at Cenzic, a web application security company. David 
+has also developed numerous commercial projects in Ruby on Rails. 
+In 2007, David founded the Lift Web Framework open source project.
+
+* Derek Chen-Becker - joined Oct 6 2008 
+I'm a senior network engineer for a large company. I've been doing software 
+development for over 14 years, with 12 years of Java experience. I started 
+working with Scala 2 years ago and I've been working heavily with Lift since 
+version 0.2 came out.
+
+* Debby Meredith - joined Sep 1 2008
+I'm a currently an engineering management consultant - http://www.meredithcole.com/ - and a venture partner at JAFCO Ventures http://www.jafco.com/.  I work hands-on with company founders, helping to assemble world class teams, architect software products and roadmaps, and establish operational processes to build success from the beginning.  Previously, I was a venture partner at Mohr Davidow Ventures, VP Eng at Netscape, VP Eng at Collabra Software, VP Eng at Slate Software, and had key technical positions at Metaphor Computer Systems, Logitech, and Bell Laboratories.
+
+Eric Torreborre - joined Jan 7 2008 
+
+Francois Bertrand - joined Sep 1 2008 
+
+Jorge Ortiz - joined Nov 27 2007 
+
+* Marius Danciu - joined Feb 18 2008 
+I'm a lift comittor for more than an year now contributing with design and development of new features as well as fixing defects. I discovered Scala about 2-3 years ago and comming from Java world  it's needless to say how much that impressed me. For the past 6 years I've been architecting,designing and developing server side Java applications orbiting around synchronization technologies such as SyncML. Before that I've been doing C/C++ programming. 
+
+
+Kris Nuttycombe - joined Oct 10 2008 
+
+* Timothy Perrett - joined Apr 24 2008 
+Technical architect / Geek / Open source junkie - my speciality is 
+systems integration for manufacturing and workflow systems. I've been working
+with Scala since the end of 07' and before that was working with Java, Ruby
+and Objective-C pretty extensively for a number of years. Also a Rails convert. 
+Whilst not working on Lift I work for an Isreali startup designing systems 
+for techno-marketing and on-demand publishing. 
+
+* Tyler Weir - joined May 13 2008 
+Currently a co-founder of Roboboogie Studios.  In my former jobs I 
+worked on compilers, desktop business apps and web applications. 
+Along with Derek and Marius, I'm a co-author of the upcoming Lift 
+book.
+
+* Viktor Klang - joined Nov 27 2007
+A Senior Systems Analyst/Architect/Project Manager/Developer/whatnot at 
+a large company. I've been doing enterprise-level software development the past 7 years, I've 
+gone through quite a few programming languages but for the past 9 years it's been Java, and the 
+past 2 years I've been into Scala adventures.
+
+
+
+== Alumni 
+
+Alex Boisvert - joined Nov 28 2007 
+
+Alex Payne - joined Jul 1 2008 
+
+Burak Emir - joined Nov 27 2007 
+
+Carsten - joined Jul 8 2008 
+
+Daniel Green - joined Nov 27 2007 
+
+* Steve Jenson - joined Nov 27 2007
+Steve Jenson added the XMPP and AMQP components of Lift. He currently
+lives in San Francisco with his wife and cats and works at Twitter
+
+Philipp Schmidt
+
+Maciek Starzyk - joined Nov 30 2007 
+
+Julien Wetterwald
+
+Stepan Koltsov
+
+Chris Wilkes
