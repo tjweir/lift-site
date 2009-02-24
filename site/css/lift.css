@@ -13,6 +13,13 @@ body {
   text-align: center;
   color:#766D6A;
 }
+a, a:link {
+  text-decoration: none;
+  color: #009de9;
+}
+a:hover {
+  text-decoration: underline;
+}
 img {
   border: 0;
 }
@@ -131,6 +138,8 @@ blockquote span {
 #main {
   min-height: 100px;
   height: auto;
+  width: 98%;
+  padding: 0 0 0 20px;
 /*  background-color: red;*/
 }
 #main .column {
@@ -150,19 +159,29 @@ hr {
   line-height:0px;
   height:1px;
   display:block;
+  clear: both;
 }
 .slim-column {
-  width: 190px;
+  width: 180px;
 /*  background-color: white;*/
 }
 .slim-column p {
-  font-size: 11px;
+  font-size: 12px;
 }
 .wide-column {
   width: 345px;
 }
+.top-padding {
+  padding-top: 36px;
+}
+.extra-wide-column {
+  width: 520px;
+}
 .left-column {
   padding-right: 10px;
+}
+.text-right {
+  text-align: right;
 }
 .right-column {
   padding-left: 10px;
@@ -173,4 +192,23 @@ h2, h3 {
 }
 h2 {
   border-bottom: 1px dashed #009de9;
+}
+.team-member {
+  min-height: 100px;
+  padding-bottom: 10px;
+  clear: both;
+/*  background-color: red;*/
+}
+.team-member img {
+  margin-right: 20px;
+  float: left;
+  margin-bottom: 50px;
+}
+.team-member h3 {
+  font-weight: bold;
+  clear: right;
+/*  text-transform: uppercase;*/
+}
+.team-member p {
+  width: 100%;
 }
