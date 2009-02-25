@@ -193,6 +193,11 @@ h1, h2, h3 {
 h2 {
   border-bottom: 1px dashed #009de9;
 }
+
+h3.date {
+  color: #009de9;
+}
+
 .team-member {
   min-height: 100px;
   padding-bottom: 10px;
