@@ -135,6 +135,15 @@ blockquote span {
   margin-right: 2px;
   height: 129px;
 }
+
+.textcenter {color: #666; margin-left: auto; margin-right:auto; width: 50%;text-align: center;}
+
+.innerbutton {
+font-size: 150%;
+padding: 10px;
+}
+
+
 #main {
   min-height: 100px;
   height: auto;
