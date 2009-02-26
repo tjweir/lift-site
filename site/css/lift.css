@@ -139,7 +139,6 @@ blockquote span {
 .textcenter {color: #666; margin-left: auto; margin-right:auto; width: 50%;text-align: center;}
 
 .innerbutton {
-font-size: 150%;
 padding: 10px;
 }
 
@@ -206,7 +205,10 @@ h2 {
 h3.date {
   color: #009de9;
 }
-
+.installer-row {
+  padding-bottom: 10px;
+  clear: both;
+}
 .team-member {
   min-height: 100px;
   padding-bottom: 10px;
@@ -225,4 +227,14 @@ h3.date {
 }
 .team-member p {
   width: 100%;
+}
+.qoute {
+  clear: both;
+}
+.qoute span {
+  font-size: 11px;
+  font-weight: bold;
+}
+.qoute p {
+  text-indent: 10px;
 }
