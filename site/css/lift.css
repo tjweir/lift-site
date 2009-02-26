@@ -139,9 +139,13 @@ blockquote span {
 .textcenter {color: #666; margin-left: auto; margin-right:auto; width: 50%;text-align: center;}
 
 .innerbutton {
-padding: 10px;
+padding: 20px 10px 10px 10px;
 }
 
+.innerbutton a {
+  font-size: 150%;
+  font-weight: bold;
+}
 
 #main {
   min-height: 100px;
