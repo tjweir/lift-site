@@ -87,13 +87,14 @@ img.developer-mugshot {
   position: absolute;
   top: 380px;
   width: 745px;
+  margin: 0;
   margin-left: 19px;
   text-align: left;
-/*  height: 130px;*/
 /*  background-color: blue;*/
 }
 #home-quotes {
 /*  height: 120px; */
+/*  clear: both;*/
 }
 #home-quotes blockquote {
   text-align: right;
@@ -124,6 +125,8 @@ blockquote span {
   height: 105px;
   width: 98%;
   margin-left: 12px;
+/*  margin-top: 10px;*/
+  clear: both;
 /*  background-color: red;*/
 }
 #top-buttons .button {
@@ -139,7 +142,7 @@ blockquote span {
 .textcenter {color: #666; margin-left: auto; margin-right:auto; width: 50%;text-align: center;}
 
 .innerbutton {
-padding: 20px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
 }
 
 .innerbutton a {
@@ -151,8 +154,8 @@ padding: 20px 10px 10px 10px;
   min-height: 100px;
   height: auto;
   width: 98%;
-  padding: 0 0 0 20px;
-/*  background-color: red;*/
+  padding: 10px 0 0 20px;
+  margin: 0;
 }
 #main .column {
   float: left;
@@ -164,12 +167,12 @@ hr {
   border: 0;
   margin: 0;
   padding:0;
-  border-bottom: 2px dashed #009de9;
+/*  border-bottom: 2px solid #009de9;*/
   border-top:0px;
   border-left:0px;
   border-right:0px;
   line-height:0px;
-  height:1px;
+  height:2px;
   display:block;
   clear: both;
 }
