@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html --> 
 <meta name="src" content="mod_master.tex"> 
-<meta name="date" content="2009-03-09 08:12:00"> 
+<meta name="date" content="2009-03-28 14:30:00"> 
 <link rel="stylesheet" type="text/css" href="mod_master.css"> 
 </head><body 
 >
@@ -22,7 +22,7 @@
 class="pplr8t-x-x-120">By Derek Chen-Becker, Marius Danciu, David Pollak and Tyler Weir</span></div>
 <br />
 <div class="date" ><span 
-class="pplr8t-x-x-120">March 9, 2009</span></div>
+class="pplr8t-x-x-120">March 28, 2009</span></div>
    </div><span 
 class="pplr8t-x-x-90">Copyright </span><span 
 class="pplr8c-x-x-90">© </span><span 
@@ -4380,7 +4380,7 @@ class="pcrr8t-">&#x003E;</span>
 class="pcrr8t-x-x-109">&#x003C;lift:TD.list all_id=~all_todos~&#x003E;</span>,
 has an <span 
 class="pcrr8t-x-x-109">all_id </span>attribute. This will pass information, the name of the <span 
-class="pcrr8t-x-x-109">id </span>attribute, the the snippet. We can
+class="pcrr8t-x-x-109">id </span>attribute, to the snippet. We can
 see the <span 
 class="pcrr8t-x-x-109">id </span>attribute on <span 
 class="pcrr8t-x-x-109">&#x003C;div id=~all_todos~&#x003E;</span>. This defines the section of the HTML that we&#8217;re going
@@ -4601,7 +4601,7 @@ class="pcrr8t-">))</span>
    
    </div>
 <!--l. 934--><p class="indent" >   We&#8217;re defining the <span 
-class="pcrr8t-x-x-109">toShow </span>method with returns a <span 
+class="pcrr8t-x-x-109">toShow </span>method which returns a <span 
 class="pcrr8t-x-x-109">List[ToDo]</span>. This method calls the
 <span 
 class="pcrr8t-x-x-109">findAll() </span>method on the <span 
@@ -5003,7 +5003,7 @@ class="pcrr8t-x-x-109">&#x003C;todo:check/&#x003E; </span>to an
 <span 
 class="pcrr8t-x-x-109">ajaxCheckbox</span>. An <span 
 class="pcrr8t-x-x-109">ajaxCheckbox </span>generates the HTML to display a checkbox. When the
-checkbox is toggled, an Ajax request is made on the server and Lift forward the new value
+checkbox is toggled, an Ajax request is made on the server and Lift forwards the new value
 of the checkbox to the function. The function, <span 
 class="pcrr8t-x-x-109">v =&#x003E; {td.done(v).save; reDraw()}</span>,
 updates the to-do item&#8217;s done field and saves the to-do item, then it calls <span 
@@ -5205,9 +5205,9 @@ case, it&#8217;s the updated HTML based on redrawing all the to-do items.
 class="pcrr8t-x-x-109">bind() </span>call binds the view template to an ajaxCheckbox and the list of our to-do
 items.
 <!--l. 1060--><p class="indent" >   Well... that&#8217;s all the code we need to write. Time to play with our new application.
-<!--l. 1063--><p class="indent" >   At the terminate, type: <span 
+<!--l. 1063--><p class="indent" >   At the terminal, type: <span 
 class="pcrr8t-x-x-109">mvn clean jetty:run</span>. The clean part of the command tells Maven to
-remove any previously compiled files. It&#8217;s best practices to-do a <span 
+remove any previously compiled files. It&#8217;s best practice to-do a <span 
 class="pcrr8t-x-x-109">clean </span>every couple of compile
 cycles.
 <!--l. 1068--><p class="indent" >   Point your browser at   <a 
