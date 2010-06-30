@@ -23,6 +23,44 @@
     <script type="text/javascript" src="../js/jquery.curvycorners.packed.js"></script>
     <script type="text/javascript" src="../js/site.js"></script>
     <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+    
+      <style type="text/css">
+    /* <![CDATA[ */
+      .comment {
+        /* font-lock-comment-face */
+        color: #b22222;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #b22222;
+      }
+      .constant {
+        /* font-lock-constant-face */
+        color: #5f9ea0;
+      }
+      .function-name {
+        /* font-lock-function-name-face */
+        color: #0000ff;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #a020f0;
+      }
+      .string {
+        /* font-lock-string-face */
+        color: #bc8f8f;
+      }
+      .type {
+        /* font-lock-type-face */
+        color: #228b22;
+      }
+      .variable-name {
+        /* font-lock-variable-name-face */
+        color: #b8860b;
+      }
+      /* ]]> */
+    </style>
+    
   </head>
   <body>
     <div id="wrapper">
@@ -30,13 +68,9 @@
         <li class="first"><a href="../index.html">Home</a></li>
         <li><a href="getting_started.html" onclick="javascript:pageTracker._trackPageview('/docs/getting_started.html');">Getting Started</a></li>
         <li><a href="../download.html">Download</a></li>
-<<<<<<< .merge_file_sUosF3
-        <li><a href="http://scala-tools.org/mvnsites/liftweb-2.0-M5/framework/" onclick="javascript:pageTracker._trackPageview('/api-documentation');">API Documentation</a></li>
-=======
-        <li><a href="http://scala-tools.org/scaladocs/liftweb/1.0/" onclick="javascript:pageTracker._trackPageview('/api-documentation');">API Documentation</a></li>
->>>>>>> .merge_file_eIzLrE
+        <li><a href="http://main.scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/index.html" onclick="javascript:pageTracker._trackPageview('/api-documentation');">API Documentation</a></li>
         <li><a href="http://groups.google.com/group/liftweb" onclick="javascript:pageTracker._trackPageview('/community');">Community</a></li>
-        <li><a href="http://wiki.github.com/dpp/liftweb" onclick="javascript:pageTracker._trackPageview('/wiki');">Wiki</a></li>
+        <li><a href="http://www.assembla.com/wiki/show/liftweb" onclick="javascript:pageTracker._trackPageview('/wiki');">Wiki</a></li>
         <li><a href="../team.html">Team</a></li>
       </ol>
       <div id="top-home"></div>
@@ -45,18 +79,67 @@
           <div class="column slim-column left-column text-right top-padding">
           </div>
           <div class="column extra-wide-column">
-            <hr />
-            <h1>Getting Started with Lift</h1>
-            <div>
-              <p>We've written a short document to help you get a taste of Lift and see how it works. It's available in 
-		two formats:
-	      </p>
-	      
-	      <ul>
-		<li><a href="StartingWithLift.pdf" onclick="javascript:pageTracker._trackPageview('/starting-with-lift.pdf');">PDF</a></li>
-		<li><a href="getting_started/mod_master.html" onclick="javascript:pageTracker._trackPageview('/starting-with-lift.html');">HTML</a></li>
-	      </ul>
+<h2>It's Chat App Time</h2>
 
+<p>So, install the <a href="http://code.google.com/p/simple-build-tool/">Simple Build Tool</a>
+(aka sbt) and download the <a href="http://github.com/lift/lift_sbt_prototype/tarball/Lift_20">TAR</a>
+or <a href="http://github.com/lift/lift_sbt_prototype/zipball/Lift_20">Zip</a>
+of the default Lift project and un-tar or un-zip the file.<br>
+</p>
+
+<p><span style="font-family: monospace;">cd</span> into the newly
+created directory and type <span style="font-family: monospace;">sbt
+update</span> to grab the
+dependcies.<br>
+</p>
+
+<p>Next, spark up your editor of choice and create the <span style="font-family: monospace;">src/main/scala/code/comet/Chat.scala</span>
+file.&nbsp; Put the following code into Chat.scala:<br>
+</p>
+
+<pre style="margin-left: 40px;"><span class="keyword">package</span> code.comet<br><br><span class="comment-delimiter">// </span><span class="comment">import some packages that we need<br></span><span class="keyword">import</span> net.liftweb._<br><span class="keyword">import</span> http._<br><span class="keyword">import</span> actor._<br><br><span class="comment-delimiter">// </span><span class="comment">define the chat server as<br></span><span class="comment-delimiter">// </span><span class="comment">an object (singleton) that's a LiftActor<br></span><span class="comment-delimiter">// </span><span class="comment">and that can manage listeners (Listen, Unlisten, Update)<br></span><span class="keyword">object</span> <span class="variable-name">ChatServer</span> <span class="keyword">extends</span> <span class="type">LiftActor</span> <span class="keyword">with</span> <span class="type">ListenerManager</span> {<br>  <span class="comment-delimiter">// </span><span class="comment">define our private state<br></span>  <span class="keyword">private</span> <span class="keyword">var</span> <span class="variable-name">messages</span> = List(<span class="string">"Welcome"</span>)<br><br>  <span class="comment-delimiter">// </span><span class="comment">what message do we send to our listeners for an update?<br></span>  <span class="keyword">def</span> <span class="function-name">createUpdate</span> = messages<br><br>  <span class="comment-delimiter">// </span><span class="comment">handle messages... in this case<br></span>  <span class="comment-delimiter">// </span><span class="comment">a chat message is a String sent to us<br></span>  <span class="keyword">override</span> <span class="keyword">def</span> <span class="function-name">lowPriority</span> = {<br>    <span class="keyword">case</span> <span class="variable-name">s</span>: <span class="type">String =&gt; messages </span><span class="variable-name">::=</span> <span class="variable-name">s</span> ; updateListeners()<br>  }<br>}<br><br><span class="comment-delimiter">// </span><span class="comment">define our chat component that knows how to <br></span><span class="comment-delimiter">// </span><span class="comment">push updates to the browser and interact with<br></span><span class="comment-delimiter">// </span><span class="comment">the ChatServer <br></span><span class="keyword">class</span> <span class="type">Chat</span> <span class="keyword">extends</span> <span class="type">CometActor</span> <span class="keyword">with</span> <span class="type">CometListener</span> {<br>  <span class="comment-delimiter">// </span><span class="comment">my private state<br></span>  <span class="keyword">private</span> <span class="keyword">var</span> <span class="variable-name">msgs</span>: <span class="type">List[String]</span> = Nil<br><br>  <span class="comment-delimiter">// </span><span class="comment">who do we listen to, yep... the ChatServer<br></span>  <span class="keyword">def</span> <span class="function-name">registerWith</span> = ChatServer<br><br>  <span class="comment-delimiter">// </span><span class="comment">handle messages from our ChatServer<br></span>  <span class="comment-delimiter">// </span><span class="comment">update our local state and re-render<br></span>  <span class="keyword">override</span> <span class="keyword">def</span> <span class="function-name">lowPriority</span> = {<br>    <span class="keyword">case</span> <span class="variable-name">m</span>: <span class="type">List[String] =&gt; msgs </span>= m; reRender(<span class="constant">false</span>)<br>  }<br><br>  <span class="comment-delimiter">// </span><span class="comment">how do we render ourselves?  This<br></span>  <span class="comment-delimiter">// </span><span class="comment">could be defined in the view or hard-coded here<br></span>  <span class="comment-delimiter">// </span><span class="comment">I'm hard-coding because it's quicker<br></span>  <span class="keyword">def</span> <span class="function-name">render</span> =<br>    &lt;div&gt;<br>    &lt;ul&gt;<br>    {<br>      msgs.reverse.map(m =&gt; &lt;li&gt;{m}&lt;/li&gt;)<br>    }<br>    &lt;/ul&gt;<br>    &lt;lift:form&gt;<br>    {<br>      <span class="comment-delimiter">// </span><span class="comment">a &lt;lift:form&gt; is an Ajax form.  Define our<br></span>      <span class="comment-delimiter">// </span><span class="comment">input box that sends the message to the chat server<br></span>      SHtml.text(<span class="string">""</span>, s =&gt; ChatServer ! s)<br>    }<br>    &lt;input <span class="keyword">type</span>=<span class="string">"submit"</span> value=<span class="string">"Chat"</span>/&gt;<br>    &lt;/lift:form&gt;<br>    &lt;/div&gt;<br>}<br></pre>
+
+<p>In your src/main/webapp/index.html file, put the tag: <span style="font-family: monospace;">&lt;lift:comet type="Chat"/&gt;</span>&nbsp;
+Run the app: <span style="font-family: monospace;">sbt ~jetty-run</span>
+and browse to <span style="font-family: monospace;">http://localhost:8080</span>
+with multiple browsers and you have your chat app.<br>
+</p>
+
+<p>But, <span style="font-weight: bold;">OMG</span>... we've mixed
+view logic with our Scala code, gaaakkk... sputter... barf.<br>
+</p>
+
+<p>Yes, Lift allows you to mix view into your business logic, <span style="font-style: italic;">but it's a choice.</span>&nbsp; Here's how
+we break the code out to separate the view from the logic.&nbsp; The
+critical thing to keep in mind is that we did not change our logic at
+all in order to achieve the separation.<br>
+</p>
+
+<p>First, let's update our view to:<br>
+
+    </p>
+<pre>  &lt;<span class="sgml-namespace">lift</span>:<span class="function-name">comet</span> <span class="variable-name">type</span>=<span class="string">"Chat"</span>&gt;<br>    &lt;<span class="function-name">ul</span>&gt;<br>      &lt;<span class="sgml-namespace">chat</span>:<span class="function-name">line</span>&gt;<br>        &lt;<span class="function-name">li</span>&gt;&lt;<span class="sgml-namespace">chat</span>:<span class="function-name">msg</span>/&gt;&lt;/<span class="function-name">li</span>&gt;<br>      &lt;/<span class="sgml-namespace">chat</span>:<span class="function-name">line</span>&gt;<br>    &lt;/<span class="function-name">ul</span>&gt;<br>    &lt;<span class="sgml-namespace">lift</span>:<span class="function-name">form</span>&gt;<br>      &lt;<span class="sgml-namespace">chat</span>:<span class="function-name">input</span>/&gt;<br>      &lt;<span class="function-name">input</span> <span class="variable-name">type</span>=<span class="string">"submit"</span> <span class="variable-name">value</span>=<span class="string">"chat"</span>/&gt;<br>    &lt;/<span class="sgml-namespace">lift</span>:<span class="function-name">form</span>&gt;<br>  &lt;/<span class="sgml-namespace">lift</span>:<span class="function-name">comet</span>&gt;<br></pre>
+
+
+
+
+
+<p><span></span>The view now contains the definition of the layout with "bind points" where dynamic content will be inserted.<br>
+</p>
+<p>Next, let's update our <span style="font-family: monospace;">Chat</span> component's render method.&nbsp; Replace the&nbsp;<span style="font-family: monospace;">def render =</span> line through the end of the file (except the closing brace) with:<br>
+    </p><pre>  <span class="comment-delimiter">// </span><span class="comment">import NodeSeq... yes, this can be done inside<br></span>  <span class="comment-delimiter">// </span><span class="comment">any scope in Scala<br></span>  <span class="keyword">import</span> scala.xml.NodeSeq<br><br>  <span class="comment-delimiter">// </span><span class="comment">the render method binds dynamic content to the bindpoints<br></span>  <span class="comment-delimiter">// </span><span class="comment">from the view<br></span>  <span class="keyword">def</span> <span class="function-name">render</span> =<br>    bind(<span class="string">"chat"</span>, <span class="comment-delimiter">// </span><span class="comment">the namespace for binding<br></span>         <span class="string">"line"</span> -&gt; lines _, <span class="comment-delimiter">// </span><span class="comment">bind the function lines<br></span>         <span class="string">"input"</span> -&gt; SHtml.text(<span class="string">""</span>, s =&gt; ChatServer ! s)) <span class="comment-delimiter">// </span><span class="comment">the input<br></span>
+  <span class="comment-delimiter">// </span><span class="comment">bind each of the messages to the view<br></span>  <span class="keyword">private</span> <span class="keyword">def</span> <span class="function-name">lines</span>(<span class="variable-name">xml</span>: <span class="type">NodeSeq</span>): <span class="type">NodeSeq </span>=<br>    msgs.reverse.flatMap(m =&gt; bind(<span class="string">"chat"</span>, xml, <span class="string">"msg"</span> -&gt; m))<br></pre>
+
+<p> And there you have it.&nbsp; We've separated the view from the
+business logic.&nbsp; Except for the render method, the business logic
+remained the same.<br>
+</p>
+<p>So, we've explored Lift's Comet and Ajax support as well as Lift's
+mechanism for view/logic separation.&nbsp; This quick demo should give
+you a sense of what Lift can do.<br>
+<br>
+
+</p>
 	      <p>Please send feedback to the 
 		<a href="http://groups.google.com/group/liftweb" onclick="javascript:pageTracker._trackPageview('/community');">community</a>
 	      </p>

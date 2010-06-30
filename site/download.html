@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head>
-    <title>Lift &ndash; The Simply Functional Web Framework &ndash; Download</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>Lift – The Simply Functional Web Framework – Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
@@ -30,12 +27,12 @@
         <li class="first"><a href="index.html">Home</a></li>
         <li><a href="docs/getting_started.html" onclick="javascript:pageTracker._trackPageview('/docs/getting_started.html');">Getting Started</a></li>
         <li><a href="download.html">Download</a></li>
-        <li><a href="http://scala-tools.org/scaladocs/liftweb/1.0/" onclick="javascript:pageTracker._trackPageview('/api-documentation');">API Documentation</a></li>
+        <li><a href="http://main.scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/index.html" onclick="javascript:pageTracker._trackPageview('/api-documentation');">API Documentation</a></li>
         <li><a href="http://groups.google.com/group/liftweb" onclick="javascript:pageTracker._trackPageview('/community');">Community</a></li>
         <li><a href="http://www.assembla.com/wiki/show/liftweb" onclick="javascript:pageTracker._trackPageview('/wiki');">Wiki</a></li>
         <li><a href="team.html">Team</a></li>
       </ol>
-      <div id="top-home"></div>
+      <div id="top-home" />
       <div id="inner">
         <div id="main">
           <div class="column slim-column left-column text-right top-padding">
@@ -47,8 +44,22 @@
           </div>
           <div class="column extra-wide-column">
             <hr />
-            <h2>DOWNLOAD</h2>
-            <p>If you already have <a href="http://maven.apache.org/download.html">Apache Maven 2.0.9</a> 
+            <h2>DOWNLOAD and run using SBT</h2>
+	    <p>
+	      Install <a href="http://code.google.com/p/simple-build-tool/">
+		Simple Build Tool
+	      </a> and download a <a href="lift.tgz">Tar</a> or 
+	      <a href="lift.zip">Zip</a> of a simple Lift project.
+	      Expand the project and cd into the <code>lift</code>
+	      directory.  Then type <pre><code>sbt update ~jetty-run</code></pre>
+	      and you should be able to browse to 
+	      <code>http://localhost:8080</code> and see your running
+	      Lift app.
+	    </p>
+
+            <h2>DOWNLOAD and run using Maven</h2>
+	    
+            <p>If you already have <a href="http://maven.apache.org/download.html">Apache Maven 2.2.0+</a> 
               or later installed and configured on your system, you already have everything you need to get started.
               If you currently don't have Maven installed, you can either install Maven manually using
               <a href="http://maven.apache.org/download.html">these instructions</a>. Alternatively, you can use
@@ -81,5 +92,4 @@
     </script>
     
     
-  </body>
-</html>
+  </body></html>
